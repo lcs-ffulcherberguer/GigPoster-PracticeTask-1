@@ -29,7 +29,78 @@ let canvas = Canvas(width: 400, height: 600)
 let lightGrey = Color(hue: 84, saturation: 6, brightness: 88, alpha: 100)
 let deepRed = Color(hue: 7, saturation: 97, brightness: 72, alpha: 100)
 
-// Begin your solution here...
+canvas.fillColor = Color(hue: 84, saturation: 6, brightness: 88, alpha: 100)
+canvas.drawShapesWithBorders = false
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: canvas.width, height: canvas.height)
+
+//// See where the origin is
+//canvas.drawAxes()
+
+//Move the origin 100 pixels right, 200 pixels up
+canvas.translate(to: Point(x: 10, y: 400))
+
+
+//Made the text for understones
+canvas.drawText(message: "undertones", at: Point(x: 0, y: 36), size: 67, kerning: 0.75)
+
+
+canvas.translate(to: Point(x: 10, y: 300 ))
+
+//Draw the rotation
+for i in stride (from: 100, to: 0, by: 5) {
+    
+    
+    // text colour
+    canvas.textColor = Color(hue: 0, saturation: 0, brightness: 0, alpha: i)
+        
+    //Made the text for understones
+    canvas.drawText(message: "undertones", at: Point(x: 0, y: -20), size: 67)
+    
+    //Rotate origin
+    canvas.rotate(by: -5)
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+//// See where the origin is
+//canvas.drawAxes()
+
+////Draw a square at the origin
+//canvas.drawRectangle(at: Point(x:  0, y: 0), width: 50, height: 50)
+
+////Make shapes no fill
+//canvas.drawShapesWithFill = false
+
+////Move the origin again - over 100, up 300
+//canvas.translate(to: Point(x: 100, y: 300))
+
+////Check to see where origin is
+//canvas.drawAxes()
+
+////Draw six squares rotated around current origin
+//for _ in 1...6 {
+    //Rotate origin
+    //canvas.rotate(by: 60)  // 360/6 = 60
+    
+    ////Draw axes
+    //canvas.drawAxes()
+    
+    ////Draw square
+    //canvas.drawRectangle(at: Point(x: 0, y: 0), width: 50, height: 50)
+//}
+
+
+// Add red text at the top of the poster
+//canvas.drawText(message: "straight music presents", at: Point(x: 0, y: 350), size: 10, kerning: 0.75)
 
 
 /*:
