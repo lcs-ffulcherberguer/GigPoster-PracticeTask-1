@@ -28,6 +28,7 @@ let canvas = Canvas(width: 400, height: 600)
 // COLORS
 let lightGrey = Color(hue: 84, saturation: 6, brightness: 88, alpha: 100)
 let deepRed = Color(hue: 7, saturation: 97, brightness: 72, alpha: 100)
+let black = Color(hue: 0, saturation: 0, brightness: 0, alpha: 50)
 
 canvas.fillColor = Color(hue: 84, saturation: 6, brightness: 88, alpha: 100)
 canvas.drawShapesWithBorders = false
@@ -36,22 +37,23 @@ canvas.drawRectangle(at: Point(x: 0, y: 0), width: canvas.width, height: canvas.
 //// See where the origin is
 //canvas.drawAxes()
 
+canvas.textColor = deepRed
+
+canvas.drawText(message: "straight music presents", at: Point(x: 10, y: 550), size: 10)
+
+
+
+//Undertones color
+canvas.textColor = black
+
 //Move the origin 100 pixels right, 200 pixels up
-canvas.translate(to: Point(x: 10, y: 400))
+canvas.translate(to: Point(x: 0, y: 400))
 
-
-//Made the text for understones
-canvas.drawText(message: "undertones", at: Point(x: 0, y: 36), size: 67, kerning: 0.75)
-
-
-canvas.translate(to: Point(x: 10, y: 300 ))
 
 //Draw the rotation
-for i in stride (from: 100, to: 0, by: 5) {
-    
-    
-    // text colour
-    canvas.textColor = Color(hue: 0, saturation: 0, brightness: 0, alpha: i)
+for text in 1...20 {
+
+    canvas.textColor = Color (hue: 0, saturation: 100, brightness: 0, alpha: 100-text*5)
         
     //Made the text for understones
     canvas.drawText(message: "undertones", at: Point(x: 0, y: -20), size: 67)
@@ -62,7 +64,7 @@ for i in stride (from: 100, to: 0, by: 5) {
 
 }
 
-
+canvas.rotate(by: 300)
 
 
 
