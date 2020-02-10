@@ -39,8 +39,16 @@ canvas.drawRectangle(at: Point(x: 0, y: 0), width: canvas.width, height: canvas.
 
 canvas.textColor = deepRed
 
-canvas.drawText(message: "straight music presents", at: Point(x: 10, y: 550), size: 10)
-
+canvas.drawText(message: "straight music presents", at: Point(x: 10, y: 550), size: 9)
+canvas.drawText(message: "the undertones", at: Point (x: 10, y: 540),size: 9)
+canvas.drawText(message: "with special guests", at: Point(x: 10, y: 515), size: 9)
+canvas.drawText(message: "the chords", at: Point(x: 10, y: 506), size: 9)
+canvas.drawText(message: "victoria hall harley", at: Point(x: 150, y: 550), size: 9)
+canvas.drawText(message: "stoke-on-trent, england", at: Point(x: 150, y: 540), size: 9)
+canvas.drawText(message: "tuesday", at: Point(x: 150, y: 515),size: 9)
+canvas.drawText(message: "june 5 1979/7:30 pm", at: Point(x: 150, y: 506),size: 9)
+canvas.drawText(message: "advance tickets: $2.00", at: Point(x: 285, y: 550), size: 9)
+canvas.drawText(message: "at the door:$2.50", at: Point(x: 285, y: 540),size: 9)
 
 
 //Undertones color
